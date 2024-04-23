@@ -3,16 +3,15 @@
   "packageManager": "yarn@3.6.1",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "shared/*",
+    "views/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "yarn workspace web run dev",
+    "build": "yarn workspace web run build",
+    "start": "yarn workspace web run start",
     "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "14.2.2",
-    "react": "^18",
-    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
